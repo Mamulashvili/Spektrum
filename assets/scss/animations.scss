@@ -1,0 +1,67 @@
+@keyframes activeNavbar {
+    from {
+        width: 0
+    }
+    to {
+        width: 70%;
+    }
+}
+
+@keyframes animateCircle {
+    from{
+        width: 15px;
+        height: 15px;
+        opacity: 0;
+    }
+    70% {
+        width: 45px;
+        height: 45px;
+        opacity: .5;
+    }
+    80%{
+        opacity: 0;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes rotateObj {
+    from {
+        transform: rotate(-30deg);
+    }
+    50% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes heroUnwrapper {
+    0%   { width: 0;left: 0; }
+    44%  { width: 100%;left: 0; }
+    54%  { width: 100%;left: 0;  }
+    100% { width: 0;left: 100%; }
+}
+
+@keyframes toggleOpacity {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes changeHeroColor {
+    from {color: $bg_c }
+    to {color: $sec_dark}
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(40%);
+        opacity: 1;
+    }
+}

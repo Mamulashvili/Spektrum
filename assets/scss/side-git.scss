@@ -1,0 +1,29 @@
+.git-status-wrapper {
+    position: absolute;
+    transform: rotateZ(-90deg);
+    left: -170px;
+    top: 550px;
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 0;
+        margin-left: 30px;
+
+        li {
+            display: inline-block;
+            color: #fff;
+            margin: 3px;
+        }
+
+        .icon-holder {
+            background-color: $accent_dark;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

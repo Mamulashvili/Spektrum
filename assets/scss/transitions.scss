@@ -1,0 +1,32 @@
+.nav-enter::before,
+.nav-leave-to::before{
+   opacity: 0;
+}
+
+.nav-enter-active::before,
+.nav-leave-active::before {
+    transition: opacity 0.5s;
+}
+
+.hero-desc-enter-from, 
+.hero-desc-leave-to {
+    opacity: 0;
+}
+
+.hero-desc-enter-active,
+.hero-desc-leave-active {
+    transition: opacity 3s ease;
+}
+
+.fade-enter,
+.fade-leave-to { 
+    opacity: 0;
+}
+
+.fade-leave,
+.fade-enter-to { 
+    opacity: 1;
+}
+
+.fade-enter-active,
+.fade-leave-active { transition: all 250ms }

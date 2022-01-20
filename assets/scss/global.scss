@@ -1,0 +1,80 @@
+@import 'variables.scss';
+@import 'navbar.scss';
+@import 'transitions.scss';
+@import 'animations.scss';
+@import 'abstract.scss';
+@import 'hero-text.scss';
+@import 'side-git.scss';
+
+body {
+    box-sizing: border-box;
+    background-color: $bg_c;
+    position: relative;
+    min-height: 100vh;
+}
+
+a {
+    color: inherit;
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+.blue {
+    color: $blue;
+}
+
+.brd {
+    border: 1px solid;
+}
+
+.pages-wrapper {
+    min-height: 100vh;
+}
+
+.hero-absolute-wrapper {
+    border: 5px solid red;
+    height: 100vh;
+}
+
+.description-text-wrapper {
+    position: absolute;
+    top: 450px;
+    // bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    margin: auto;
+    // transform: translateY(25%);
+    max-height: 30vh;
+    animation: slide-up .5s ease;
+
+        p {
+            color: $w;
+            font-size: 45px;
+            text-align: center;
+            letter-spacing: 3px;
+            line-height: 55px;
+        }
+
+        button {
+            background-color: $accent_dark;
+            color:#fff;
+        }
+}
+
+.page-content-wrapper {
+    margin-top: 20%;
+    position: absolute;
+    left: 0;
+    right:0;
+
+        .text-wrapper {
+            color: $w;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .reverse-img {transform: scaleX(-1);}
+}

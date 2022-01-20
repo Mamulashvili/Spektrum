@@ -1,0 +1,353 @@
+.navigation {
+  padding-left: 10rem;
+  padding-right: 4rem;
+}
+.navigation span {
+  color: #fff;
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+.navigation span.active {
+  color: #326BFC;
+}
+.navigation .routes a {
+  color: #838A8D;
+  margin: 0 2rem;
+}
+.navigation .routes .icon {
+  width: 35px;
+  height: 35px;
+  background-color: #326BFC;
+  cursor: pointer;
+  margin-left: 2rem;
+  position: relative;
+  transition: 0.3s ease;
+}
+.navigation .routes .icon:hover {
+  animation: rotateObj 1s ease;
+}
+.navigation .routes .icon::before {
+  content: "";
+  position: absolute;
+  background-color: #8ba5e9;
+  z-index: -1;
+  border-radius: 50%;
+  animation: animateCircle 5s ease infinite;
+}
+.navigation .routes .nuxt-link-active {
+  color: #fff;
+  position: relative;
+  transition: 0.3s ease;
+}
+.navigation .routes .nuxt-link-active::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 2px;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: ease;
+  animation: activeNavbar 0.5s ease forwards;
+}
+
+.nav-enter::before,
+.nav-leave-to::before {
+  opacity: 0;
+}
+
+.nav-enter-active::before,
+.nav-leave-active::before {
+  transition: opacity 0.5s;
+}
+
+.hero-desc-enter-from,
+.hero-desc-leave-to {
+  opacity: 0;
+}
+
+.hero-desc-enter-active,
+.hero-desc-leave-active {
+  transition: opacity 3s ease;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-leave,
+.fade-enter-to {
+  opacity: 1;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 250ms;
+}
+
+@keyframes activeNavbar {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70%;
+  }
+}
+@keyframes animateCircle {
+  from {
+    width: 15px;
+    height: 15px;
+    opacity: 0;
+  }
+  70% {
+    width: 45px;
+    height: 45px;
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes rotateObj {
+  from {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes heroUnwrapper {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  44% {
+    width: 100%;
+    left: 0;
+  }
+  54% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes toggleOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes changeHeroColor {
+  from {
+    color: #1B1D1E;
+  }
+  to {
+    color: #151618;
+  }
+}
+@keyframes slide-up {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(40%);
+    opacity: 1;
+  }
+}
+.rectangle,
+.triangle-shape,
+.triangle-fill {
+  position: absolute;
+  transition: 0.3s ease;
+}
+
+.rectangle {
+  width: 50px;
+  height: 5px;
+  background-color: #151618;
+  z-index: 2;
+  top: 12%;
+  left: 50%;
+}
+
+.triangle-shape-holder {
+  transform: rotate(90deg);
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  z-index: -1;
+  transition: 0.3s ease;
+  top: 27%;
+  left: 35%;
+}
+
+.triangle-shape {
+  width: 10px;
+  height: 10px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #326BFC;
+}
+
+.inner-triangle {
+  position: relative;
+  top: -7px;
+  left: -9px;
+  width: 10px;
+  height: 10px;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid #1B1D1E;
+}
+
+.triangle-fill {
+  width: 10px;
+  height: 10px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 13px solid #0A0A0B;
+  top: 25%;
+  left: 60%;
+  z-index: -1;
+}
+
+.hero-wrapper {
+  padding-top: 190px;
+  max-height: 90vh;
+  z-index: -2;
+}
+.hero-wrapper .hero-title {
+  color: #151618;
+  font-size: 17rem;
+  line-height: 13rem;
+  font-weight: bolder;
+  margin-bottom: 0;
+  position: relative;
+  animation: changeHeroColor 3s ease;
+}
+.hero-wrapper .hero-title::before {
+  content: "";
+  position: absolute;
+  background-color: #151618;
+  top: 0;
+  bottom: 0;
+  animation: heroUnwrapper 1.5s ease forwards;
+}
+.hero-wrapper .hero-title:nth-of-type(even)::before {
+  animation-delay: 0.3s;
+  background-color: #0A0A0B;
+}
+
+.git-status-wrapper {
+  position: absolute;
+  transform: rotateZ(-90deg);
+  left: -170px;
+  top: 550px;
+}
+.git-status-wrapper ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 0;
+  margin-left: 30px;
+}
+.git-status-wrapper ul li {
+  display: inline-block;
+  color: #fff;
+  margin: 3px;
+}
+.git-status-wrapper ul .icon-holder {
+  background-color: #08080A;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #1B1D1E;
+  position: relative;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+}
+
+.blue {
+  color: #326BFC;
+}
+
+.brd {
+  border: 1px solid;
+}
+
+.pages-wrapper {
+  min-height: 100vh;
+}
+
+.hero-absolute-wrapper {
+  border: 5px solid red;
+  height: 100vh;
+}
+
+.description-text-wrapper {
+  position: absolute;
+  top: 450px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  margin: auto;
+  max-height: 30vh;
+  animation: slide-up 0.5s ease;
+}
+.description-text-wrapper p {
+  color: #fff;
+  font-size: 45px;
+  text-align: center;
+  letter-spacing: 3px;
+  line-height: 55px;
+}
+.description-text-wrapper button {
+  background-color: #08080A;
+  color: #fff;
+}
+
+.page-content-wrapper {
+  margin-top: 20%;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.page-content-wrapper .text-wrapper {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.page-content-wrapper .reverse-img {
+  transform: scaleX(-1);
+}
+
+/*# sourceMappingURL=style.css.map */

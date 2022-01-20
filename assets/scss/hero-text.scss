@@ -1,0 +1,30 @@
+.hero-wrapper {
+    padding-top: 190px;
+    max-height: 90vh;
+    z-index: -2;
+
+        .hero-title {
+            color: $sec_dark;
+            font-size: 17rem;
+            line-height: 13rem;
+            font-weight: bolder;
+            margin-bottom: 0;
+            position: relative;
+            animation: changeHeroColor 3s ease;
+                
+                &::before {
+                    content: "";
+                    position: absolute;
+                    background-color: $sec_dark;
+                    top: 0;
+                    bottom: 0;
+                    animation: heroUnwrapper 1.5s ease forwards;
+                }
+
+                &:nth-of-type(even)::before {
+                    animation-delay: 0.3s;
+                    background-color: #0A0A0B;
+                }
+        }
+}
+
